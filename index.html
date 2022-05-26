@@ -9,7 +9,7 @@
   <body>
     <div id="myData"></div>
     <script type="text/javascript">
-      fetch("data.json")
+      fetch("https://raw.githubusercontent.com/lucetre/test/master/data.json")
         .then(function (response) {
           return response.json();
         })
@@ -24,7 +24,7 @@
         let mainContainer = document.getElementById("myData");
         for (let i = 0; i < data.length; i++) {
           let div = document.createElement("div");
-          div.innerHTML = "Name: " + data[i].firstName + " " + data[i].lastName;
+          div.innerHTML = "Name: " + data[i].name;
           mainContainer.appendChild(div);
         }
       }
